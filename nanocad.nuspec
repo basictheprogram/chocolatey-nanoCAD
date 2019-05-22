@@ -8,7 +8,7 @@
     <title>nanoCAD</title>
     <authors>Nanosoft</authors>
     <projectUrl>https://nanocad.com/products/nanoCAD/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/basictheprogram/chocolatey-nanoCAD/blob/master/nanoCAD_icon.png</iconUrl>
+    <iconUrl>https://basictheprogram.github.io/chocolatey-nanoCAD/nanoCAD_icon.png</iconUrl>
     <copyright>Copyright 2019 Nanosoft. All Rights Reserved</copyright>
     <licenseUrl>https://nanocad.com/files/NS%20Intl%20EULA,%20ENG,%20V0.67,%201-10-2013.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
