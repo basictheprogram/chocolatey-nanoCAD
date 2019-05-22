@@ -1,80 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
-<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
-
-<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
-
-<!--
-This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
-
-* the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces 
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements 
--->
-
-<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
-<!-- * If you are an organization making private packages, you probably have no issues here -->
-<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- == PACKAGE SPECIFIC SECTION == -->
-    <!-- This section is about this package, although id and version have ties back to the software -->
-    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
-    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
     <id>nanocad</id>
-    <!-- version should MATCH as closely as possible with the underlying software -->
-    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
-    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>__REPLACE__</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
-    <!-- ============================== -->
+    <version>5.0</version>
+    <packageSourceUrl>https://github.com/basictheprogram/chocolatey-nanoCad</packageSourceUrl>
+    <owners>BasicTheProgram</owners>
+    <title>nanoCAD</title>
+    <authors>Nanosoft</authors>
+    <projectUrl>https://nanocad.com/products/nanoCAD/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/basictheprogram/chocolatey-nanoCAD/master/nanoCAD_icon.png</iconUrl>
+    <copyright>Year Software Vendor</copyright>
+    <licenseUrl>https://nanocad.com/files/NS%20Intl%20EULA,%20ENG,%20V0.67,%201-10-2013.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://nanocad.com/page/NanocadSupport</docsUrl>
+    <bugTrackerUrl>http://forum.nanocad.com</bugTrackerUrl>
+    <tags>nanoCAD DWG compatibility</tags>
+    <summary>nanoCAD is professional software with familiar interface, powerful drafting and 
+             design tools, native DWG compatibility, and open API.</summary>
+    <description>## nanoCAD is a multi-purpose free drafting software
+    nanoCAD is an easy-to-use CAD application that delivers a great user experience by providing 
+    high performance, full capability, a classic interface and native .dwg format support. 
+    nanoCAD has been built to deliver design and project documentation for all industries. 
+    nanoCAD includes a full suite of basic and advanced tools, for creating industry-standard 
+    DWG-compatible CAD files. nanoCAD provides innovative, collaborative and customizable 
+    features to enhance your efficiency. nanoCAD includes several API's, allowing anything 
+    from routine task automation to complex CAD application development. All for free.
 
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <!-- This section is about the software itself -->
-    <title>nanoCAD (Install)</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
-    <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/nanocad.png</iconUrl>-->
-    <!-- <copyright>Year Software Vendor</copyright> -->
-    <!-- If there is a license Url available, it is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
-    <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>nanocad SPACE_SEPARATED</tags>
-    <summary>__REPLACE__</summary>
-    <description>__REPLACE__MarkDown_Okay </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-    <!-- =============================== -->      
+    ## Industry-standard user interface
+    nanoCAD implements a very efficient, and easy to learn, classic-style CAD user interface. 
+    It offers a command set and UI elements appearance that will be familiar and comfortable 
+    to users of many other compatible CAD applications. The drawing space, command line, and 
+    position of the menu items and icons on the toolbars are readily recognizable. Any person 
+    with AutoCAD experience will feel at home using nanoCAD, right from the start.
 
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
-    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
+    ## Clean and native *.dwg support
+    nanoCAD uses the industry-standard DWG &#40;*.dwg&#41; file format natively. Drawings created 
+    or edited in nanoCAD can be used by almost any other popular CAD system, without conversion 
+    or data loss. If you can&#39;t open a drawing from another system due to damage, or you want 
+    to audit an opened drawing for errors, or you need to reduce file size, nanoCAD provides 
+    Audit, Recover and Purge commands. Be assured you will not lose document data due to software 
+    or hardware failures thanks to nanoCAD&#39;s autosaving and backup functions.          
 
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+    ## Comprehensive command set
+    nanoCAD includes an extensive set of tools for creating and editing 2D/3D objects. There are 
+    often multiple drawing methods available for creating most geometric elements. It's 
+    well-thought-out object editing commands allow you to modify drawings with minimal mouse 
+    clicks. Reusable blocks and references to external drawings simplify and speed up the drawing 
+    process. Advanced dimensioning features enable you to create any kind of dimensions by several
+    means.       
+
+    ## Powerful Table Editor
+    nanoCAD has a powerful Excel-style table editor, with an extensive set of capabilities, 
+    including the ability to create tables containing cells with embedded macros and formulas.  
+
+    ## ActiveX Automation and LISP
+    The nanoCAD scripting engine allows average users to automate everyday routine tasks. Users 
+    can write macros using Visual Basic Script, Java Script or any other scripting language 
+    supported by Microsoft Windows as well as built-in LISP.       
+
+    ## C++/C# API
+    nanoCAD has several types of APIs for building CAD applications on top of its core 
+    functionality. NRX is a C++ and .NET API very similar to AutoCAD's ARX. It allows the 
+    translation of AutoCAD-based applications to nanoCAD with ease. It is an object-oriented, 
+    compact and robust programming interface. It is field proven, and has been used to create 
+    a large number of commercial CAD applications.
+
+    nanoCAD also features the MultiCAD API™ for C++ and .NET, a revolutionary development tool 
+    to create binary compatible applications for different CAD platforms. Applications developed 
+    with the MultiCAD API will be able to run not just in nanoCAD, but also in other compatible 
+    CAD systems—including AutoCAD.      
+
+    ## Extended plotting	
+    nanoCAD's plot settings dialog allow you to set multiple plot areas, and create multi-page 
+    plots. This can be especially useful for printing large drawings on printers with smaller 
+    output format. The Batch Plot command creates and prints drawing sets without requiring you 
+    to babysit the process. It is convenient when you need to print existing projects. It also 
+    supports outputting drawings to single or multi-sheet plot files.    
+    </description>
+    <releaseNotes>https://nanocad.com/page/NanoCAD5New</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2008" version="9.0.30729.17" />
+      <dependency id="dotnet3.5" />
+    </dependencies>
   </metadata>
   <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
