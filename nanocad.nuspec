@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nanocad</id>
-    <version>5.0</version>
+    <version>5.0.2520.2000</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-nanoCad</packageSourceUrl>
     <owners>BasicTheProgram</owners>
     <title>nanoCAD</title>
     <authors>Nanosoft</authors>
     <projectUrl>https://nanocad.com/products/nanoCAD/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/basictheprogram/chocolatey-nanoCAD/master/nanoCAD_icon.png</iconUrl>
-    <copyright>Year Software Vendor</copyright>
+    <iconUrl>https://cdn.rawgit.com/basictheprogram/chocolatey-nanoCAD/blob/master/nanoCAD_icon.png</iconUrl>
+    <copyright>Copyright 2019 Nanosoft. All Rights Reserved</copyright>
     <licenseUrl>https://nanocad.com/files/NS%20Intl%20EULA,%20ENG,%20V0.67,%201-10-2013.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://nanocad.com/page/NanocadSupport</docsUrl>
