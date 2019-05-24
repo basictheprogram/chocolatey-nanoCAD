@@ -2,7 +2,7 @@
 
 $packageName    = 'nanoCAD'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation64 = Join-Path $toolsDir "NCE50(2007).exe"
+$fileLocation64 = 'N:\gold-images\nanoCAD\NCE50(2007).exe'                             # Change to your URI
 $checkSum64     = 'ecbf276d405e36010db5840cddd3e1db3f7b2ccb3cc8ff620e7a2cb4a0344956'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
